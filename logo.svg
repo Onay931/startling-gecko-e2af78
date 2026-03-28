@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" fill="none">
+  <defs>
+    <linearGradient id="leaf-grad" x1="20" y1="10" x2="80" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#43A047"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+    <linearGradient id="arrow-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9E9E9E"/>
+      <stop offset="50%" stop-color="#616161"/>
+      <stop offset="100%" stop-color="#424242"/>
+    </linearGradient>
+    <linearGradient id="leaf-shine" x1="30" y1="20" x2="70" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Recycling arrow circle -->
+  <g transform="translate(60, 60)">
+    <!-- Circular arrow path -->
+    <path d="M 0,-48 A 48,48 0 1,1 -41.6,24" stroke="url(#arrow-grad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Arrow head -->
+    <polygon points="-48,18 -34,30 -42,12" fill="#616161"/>
+  </g>
+
+  <!-- Leaf shape -->
+  <g transform="translate(60, 60)">
+    <path d="M 0,-38 C 22,-36 36,-18 34,8 C 32,28 18,38 0,42 C -18,38 -32,28 -34,8 C -36,-18 -22,-36 0,-38 Z" fill="url(#leaf-shine)" stroke="#1B5E20" stroke-width="1"/>
+
+    <!-- Circuit traces on leaf -->
+    <line x1="0" y1="30" x2="0" y2="-8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="30" x2="-14" y2="-14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="30" x2="14" y2="-14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Circuit dots -->
+    <circle cx="0" cy="-10" r="3.5" fill="white"/>
+    <circle cx="-14" cy="-16" r="3.5" fill="white"/>
+    <circle cx="14" cy="-16" r="3.5" fill="white"/>
+  </g>
+
+  <!-- Text: "Eco" in green -->
+  <text x="125" y="62" font-family="'Sora', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#2E7D32">Eco</text>
+  <!-- Text: "Circuit" in silver/grey -->
+  <text x="210" y="62" font-family="'Sora', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#757575">Circuit</text>
+
+  <!-- Text: "RECYCLING" -->
+  <text x="214" y="86" font-family="'Sora', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0.35em" fill="#2E7D32">RECYCLING</text>
+</svg>
