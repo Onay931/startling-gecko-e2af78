@@ -4,6 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EcoCircuit Recycling — Clearing Space. Recovering Value.</title>
+<meta name="description" content="EcoCircuit Recycling offers free pickup of old contactors, relays, control panels, and electrical components across Johannesburg. Cash incentives for full loads.">
+<meta name="keywords" content="electrical recycling, contactor recycling, relay recycling, control panel removal, e-waste Johannesburg, free electrical pickup, industrial scrap recycling">
+<meta name="author" content="EcoCircuit Recycling">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="EcoCircuit Recycling — Clearing Space. Recovering Value.">
+<meta property="og:description" content="Free pickup of old contactors, relays, control panels, and electrical components across Johannesburg. Cash incentives for full loads.">
+<meta property="og:url" content="https://www.ecocircuit.co.za">
+<meta property="og:site_name" content="EcoCircuit Recycling">
+<meta property="og:locale" content="en_ZA">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EcoCircuit Recycling — Clearing Space. Recovering Value.">
+<meta name="twitter:description" content="Free pickup of old contactors, relays, control panels, and electrical components across Johannesburg.">
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻️</text></svg>">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.ecocircuit.co.za">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "EcoCircuit Recycling",
+  "description": "Professional recycling of industrial electrical components including contactors, relays, control panels, and breakers. Free pickup across Johannesburg.",
+  "url": "https://www.ecocircuit.co.za",
+  "telephone": "+27692992530",
+  "email": "info@ecocircuit.co.za",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "geoRadius": "60000"
+  },
+  "priceRange": "Free pickup",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  },
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Field Operations",
+    "telephone": "+27692992530",
+    "name": "Ariell Onay"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -101,6 +167,7 @@
     display: none;
     flex-direction: column; gap: 5px;
     cursor: pointer; padding: 4px;
+    background: none; border: none;
   }
   .nav-hamburger span {
     display: block; width: 24px; height: 2px;
@@ -837,25 +904,50 @@
     }
     .chat-fab { bottom: 16px; right: 16px; }
   }
+  /* ─── SKIP NAV ─── */
+  .skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green-mid);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 10000;
+    text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus {
+    top: 0;
+  }
 </style>
 </head>
 <body>
 
+<!-- SKIP NAVIGATION -->
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
 <!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">
+<nav id="navbar" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="EcoCircuit Recycling - Home">
     <span class="nav-logo-text">Eco<span>Circuit</span> Recycling</span>
   </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#industries">Who We Serve</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Free Pickup</a></li>
+  <ul class="nav-links" id="navLinks" role="menubar">
+    <li role="none"><a href="#services" role="menuitem">Services</a></li>
+    <li role="none"><a href="#how" role="menuitem">How It Works</a></li>
+    <li role="none"><a href="#industries" role="menuitem">Who We Serve</a></li>
+    <li role="none"><a href="#contact" class="nav-cta" role="menuitem">Get a Free Pickup</a></li>
   </ul>
-  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+  <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
+
+<!-- MAIN CONTENT -->
+<main id="main-content">
 
 <!-- HERO -->
 <section id="hero">
@@ -1101,7 +1193,7 @@
         <div class="contact-item-icon">📧</div>
         <div class="contact-item-text">
           <h4>Email</h4>
-          <a href="/cdn-cgi/l/email-protection#066f68606946636569656f7465736f72286569287c67"><span class="__cf_email__" data-cfemail="6b02050d042b0e0804080219081e021f45080445110a">[email&#160;protected]</span></a>
+          <a href="mailto:info@ecocircuit.co.za">info@ecocircuit.co.za</a>
         </div>
       </div>
       <div class="contact-item reveal">
@@ -1123,15 +1215,15 @@
     <div class="contact-form-box reveal">
       <h3>Request a Free Collection</h3>
       <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" id="f-name" placeholder="e.g. John Smith">
+        <label for="f-name">Your Name</label>
+        <input type="text" id="f-name" placeholder="e.g. John Smith" required autocomplete="name">
       </div>
       <div class="form-group">
-        <label>Phone / WhatsApp</label>
-        <input type="tel" id="f-phone" placeholder="+27 ...">
+        <label for="f-phone">Phone / WhatsApp</label>
+        <input type="tel" id="f-phone" placeholder="+27 ..." autocomplete="tel">
       </div>
       <div class="form-group">
-        <label>Material Type</label>
+        <label for="f-type">Material Type</label>
         <select id="f-type">
           <option value="">Select material...</option>
           <option>Contactors &amp; Relays</option>
@@ -1144,21 +1236,23 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Location &amp; Details</label>
-        <textarea id="f-details" placeholder="Tell us where you are and roughly how much material you have..."></textarea>
+        <label for="f-details">Location &amp; Details</label>
+        <textarea id="f-details" placeholder="Tell us where you are and roughly how much material you have..." required></textarea>
       </div>
-      <button class="btn-submit" onclick="submitToWhatsApp()">
+      <button type="button" class="btn-submit" onclick="submitToWhatsApp()">
         Send via WhatsApp →
       </button>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Eco<span>Circuit</span> Recycling</div>
   <p class="footer-tagline">Clearing Space. Recovering Value.</p>
-  <p>+27 69 299 2530 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ce5e2eae3cce9efe3efe5feeff9e5f8a2efe3a2f6ed">[email&#160;protected]</a> · www.ecocircuit.co.za</p>
+  <p>+27 69 299 2530 · <a href="mailto:info@ecocircuit.co.za" style="color:inherit;text-decoration:none;">info@ecocircuit.co.za</a> · www.ecocircuit.co.za</p>
   <p style="margin-top:8px">Johannesburg &amp; Surrounds · Serving Electrical Contractors, HVAC, Elevator &amp; Industrial Sites</p>
   <p style="margin-top:16px; font-size:0.72rem; opacity:0.3">© 2026 EcoCircuit Recycling. All rights reserved.</p>
 </footer>
@@ -1211,10 +1305,14 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ─── NAV ───
 function toggleNav() {
-  document.getElementById('navLinks').classList.toggle('open');
+  const navLinks = document.getElementById('navLinks');
+  const hamburger = document.getElementById('hamburger');
+  navLinks.classList.toggle('open');
+  const isOpen = navLinks.classList.contains('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
 }
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
@@ -1236,14 +1334,28 @@ reveals.forEach(r => observer.observe(r));
 
 // ─── WHATSAPP FORM ───
 function submitToWhatsApp() {
-  const name    = document.getElementById('f-name').value.trim();
+  const nameEl    = document.getElementById('f-name');
+  const detailsEl = document.getElementById('f-details');
+  const name    = nameEl.value.trim();
   const phone   = document.getElementById('f-phone').value.trim();
   const type    = document.getElementById('f-type').value;
-  const details = document.getElementById('f-details').value.trim();
-  if (!name && !details) {
-    alert('Please fill in at least your name and location details.');
+  const details = detailsEl.value.trim();
+
+  // Validate required fields
+  if (!name) {
+    nameEl.focus();
+    nameEl.style.borderColor = '#E65100';
     return;
   }
+  nameEl.style.borderColor = '';
+
+  if (!details) {
+    detailsEl.focus();
+    detailsEl.style.borderColor = '#E65100';
+    return;
+  }
+  detailsEl.style.borderColor = '';
+
   let msg = `Hi EcoCircuit! I'd like to arrange a collection.\n\n`;
   if (name)    msg += `*Name:* ${name}\n`;
   if (phone)   msg += `*Phone:* ${phone}\n`;
